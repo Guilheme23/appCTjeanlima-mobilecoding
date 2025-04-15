@@ -1,0 +1,55 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: TelaInicial(),
+    );
+  }
+}
+
+class TelaInicial extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Tela Inicial")),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Olá, Usuário",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 40),
+            ElevatedButton(
+              onPressed: () {
+                // Ação para Treinos
+                print("Botão de Treinos pressionado");
+                // Aqui você pode navegar para a tela de treinos, por exemplo
+              },
+              child: Text("Treinos"),
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                // Ação para Professores
+                print("Botão de Professores pressionado");
+                // Aqui você pode navegar para a tela de professores, por exemplo
+              },
+              child: Text("Professores"),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
